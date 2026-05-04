@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delete Account — Ideal Soles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red: #C0392B;
+      --red-light: #E74C3C;
+      --dark: #1a1a1a;
+      --grey: #555;
+      --light-grey: #f5f5f5;
+      --border: #e0e0e0;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.8;
+    }
+
+    header {
+      background: var(--dark);
+      padding: 32px 24px;
+      text-align: center;
+      border-bottom: 4px solid var(--red);
+    }
+
+    header .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #fff;
+      letter-spacing: 2px;
+    }
+
+    header .brand span { color: var(--red-light); }
+
+    header p {
+      color: #aaa;
+      font-size: 0.85rem;
+      margin-top: 6px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #999;
+      font-size: 0.95rem;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    p { color: var(--grey); margin-bottom: 14px; font-size: 0.95rem; }
+
+    .warning-box {
+      background: #fff5f5;
+      border: 1px solid #ffcccc;
+      border-left: 4px solid var(--red);
+      padding: 18px 22px;
+      border-radius: 0 6px 6px 0;
+      margin: 24px 0 32px;
+    }
+
+    .warning-box p {
+      margin: 0;
+      color: var(--red);
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    .info-box {
+      background: var(--light-grey);
+      border-left: 4px solid #aaa;
+      padding: 18px 22px;
+      border-radius: 0 6px 6px 0;
+      margin: 20px 0;
+    }
+
+    .info-box p { margin: 0; color: var(--dark); font-size: 0.9rem; }
+
+    ul {
+      list-style: none;
+      margin: 0 0 20px;
+      padding: 0;
+    }
+
+    ul li {
+      color: var(--grey);
+      font-size: 0.95rem;
+      padding: 5px 0 5px 22px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 7px;
+      height: 7px;
+      background: var(--red);
+      border-radius: 50%;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--dark);
+      margin: 32px 0 12px;
+    }
+
+    .steps {
+      counter-reset: step-counter;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 30px;
+    }
+
+    .steps li {
+      counter-increment: step-counter;
+      padding: 16px 16px 16px 56px;
+      margin-bottom: 12px;
+      background: var(--light-grey);
+      border-radius: 8px;
+      position: relative;
+      color: var(--grey);
+      font-size: 0.95rem;
+    }
+
+    .steps li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--red);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .email-btn {
+      display: inline-block;
+      background: var(--red);
+      color: #fff !important;
+      padding: 14px 32px;
+      border-radius: 4px;
+      text-decoration: none !important;
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin-top: 8px;
+      transition: background 0.2s;
+    }
+
+    .email-btn:hover { background: var(--red-light); }
+
+    a { color: var(--red); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    footer {
+      background: var(--dark);
+      color: #777;
+      text-align: center;
+      padding: 24px;
+      font-size: 0.82rem;
+    }
+
+    footer span { color: var(--red-light); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">IDEAL <span>SOLES</span></div>
+  <p>Footwear Management Platform</p>
+</header>
+
+<div class="container">
+  <div class="badge">Account</div>
+  <h1>Delete Your Account</h1>
+  <p class="subtitle">We're sorry to see you go. Please read the information below before submitting your deletion request.</p>
+
+  <div class="warning-box">
+    <p>⚠️ Account deletion is permanent and cannot be undone. All your data will be removed within 30 days.</p>
+  </div>
+
+  <h2>What gets deleted</h2>
+  <ul>
+    <li>Your account profile and login credentials</li>
+    <li>Order history and delivery records</li>
+    <li>Uploaded payment receipts and media files</li>
+    <li>Quotation requests and chat history</li>
+    <li>Ledger and transaction records</li>
+  </ul>
+
+  <div class="info-box">
+    <p>📌 Some data may be retained for a limited period if required by law or for legitimate business purposes (e.g., financial records).</p>
+  </div>
+
+  <h2>How to request deletion</h2>
+  <p>Send us an email from your registered email address with the subject line <strong>"Account Deletion Request"</strong>. Include your full name and registered email in the message body.</p>
+
+  <ol class="steps">
+    <li>Tap the button below to open your email app</li>
+    <li>Make sure you're sending from your <strong>registered email address</strong></li>
+    <li>We will verify your identity and process the request within <strong>7 business days</strong></li>
+    <li>You will receive a confirmation email once your account has been deleted</li>
+  </ol>
+
+  <a class="email-btn" href="mailto:Idealsolespk@gmail.com?subject=Account%20Deletion%20Request&body=Hello%20Ideal%20Soles%20Team%2C%0A%0AI%20would%20like%20to%20request%20the%20permanent%20deletion%20of%20my%20account.%0A%0AFull%20Name%3A%20%0ARegistered%20Email%3A%20%0A%0AThank%20you.">
+    📧 Send Deletion Request
+  </a>
+
+  <br/><br/>
+  <p>Or email us directly at <a href="mailto:Idealsolespk@gmail.com">Idealsolespk@gmail.com</a> with the subject <strong>"Account Deletion Request"</strong>.</p>
+
+  <p style="margin-top: 32px;">If you have any questions, feel free to reach out before submitting your request.</p>
+</div>
+
+<footer>
+  &copy; 2026 <span>Ideal Soles</span>. All rights reserved. &nbsp;|&nbsp; Pakistan
+</footer>
+
+</body>
+</html>
